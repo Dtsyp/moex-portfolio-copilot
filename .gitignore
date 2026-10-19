@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Data (не коммитим данные биржи)
+data/
+*.parquet
+*.duckdb
+
+# MLflow
+mlruns/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
