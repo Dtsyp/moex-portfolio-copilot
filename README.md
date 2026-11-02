@@ -42,7 +42,7 @@
 9. Мониторинг: качество данных, дрифт признаков, деградация IC
 10. MLOps: Docker Compose, CI, тесты на утечки, `make reproduce`
 
-Подробности: [docs/design_doc.md](docs/design_doc.md).
+Подробности: [docs/ml_system_design_doc.md](docs/ml_system_design_doc.md).
 
 ## План (12 недель)
 
