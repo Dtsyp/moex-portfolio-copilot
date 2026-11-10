@@ -1,0 +1,482 @@
+{
+  "development_window": [
+    "2015-01-01",
+    "2024-12-31"
+  ],
+  "config": {
+    "start": "2015-01-01",
+    "end": "2024-12-31",
+    "holdout_start": "2025-01-01",
+    "workers": 4,
+    "history_start": "2024-01-01",
+    "history_tickers": [
+      "SBER",
+      "GAZP",
+      "LKOH",
+      "GMKN",
+      "YNDX",
+      "YDEX",
+      "TCSG",
+      "T",
+      "FIVE"
+    ],
+    "news_dataset": "Kasymkhan/RussianFinancialNews",
+    "news_revision": "f83da5c05c82c9086806cf90ded4155052f9605c"
+  },
+  "versions": {
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.8",
+    "pyarrow": "26.0.1"
+  },
+  "tables": {
+    "candles": {
+      "rows": 166782,
+      "columns": 9,
+      "processed_bytes": 5138811
+    },
+    "index_snapshots": {
+      "rows": 1803,
+      "columns": 9,
+      "processed_bytes": 17725
+    },
+    "history": {
+      "rows": 1767,
+      "columns": 24,
+      "processed_bytes": 150701
+    },
+    "benchmark": {
+      "rows": 2508,
+      "columns": 20,
+      "processed_bytes": 138846
+    },
+    "fx": {
+      "rows": 2468,
+      "columns": 3,
+      "processed_bytes": 36816
+    },
+    "key_rate": {
+      "rows": 2504,
+      "columns": 2,
+      "processed_bytes": 15667
+    },
+    "news": {
+      "rows": 91477,
+      "columns": 8,
+      "processed_bytes": 41610503
+    }
+  },
+  "market": {
+    "rows": 166782,
+    "securities": 89,
+    "date_min": "2015-01-05",
+    "date_max": "2024-12-30",
+    "duplicate_security_date_keys": 0,
+    "ohlc_violations": 0,
+    "nonpositive_prices": 0,
+    "nonfinite_prices": 0,
+    "zero_volume_rows": 0,
+    "zero_value_rows": 0,
+    "negative_value_rows": 0,
+    "negative_volume_rows": 0,
+    "dates_outside_benchmark_calendar": 33,
+    "nulls": {
+      "open": 0,
+      "close": 0,
+      "high": 0,
+      "low": 0,
+      "value": 0,
+      "volume": 0
+    },
+    "dtypes": {
+      "open": "float64",
+      "close": "float64",
+      "high": "float64",
+      "low": "float64",
+      "value": "float64",
+      "volume": "int64",
+      "begin": "object",
+      "end": "object",
+      "secid": "object",
+      "date": "datetime64[ns]"
+    },
+    "empty_candle_tickers": []
+  },
+  "alias_overlap": [
+    {
+      "first_code": "TCSG",
+      "second_code": "T",
+      "first_rows": 1248,
+      "second_rows": 1272,
+      "common_dates": 1248,
+      "equal_ohlcv_rows": 0,
+      "common_date_min": "2019-10-28",
+      "common_date_max": "2024-11-27",
+      "close_ratio_median": 10.0,
+      "close_ratio_min": 10.0,
+      "close_ratio_max": 10.0,
+      "near_constant_close_ratio": true
+    },
+    {
+      "first_code": "YNDX",
+      "second_code": "YDEX",
+      "first_rows": 2364,
+      "second_rows": 115,
+      "common_dates": 0,
+      "equal_ohlcv_rows": 0,
+      "common_date_min": null,
+      "common_date_max": null,
+      "close_ratio_median": null,
+      "close_ratio_min": null,
+      "close_ratio_max": null,
+      "near_constant_close_ratio": false
+    },
+    {
+      "first_code": "RUALR",
+      "second_code": "RUAL",
+      "first_rows": 652,
+      "second_rows": 2448,
+      "common_dates": 595,
+      "equal_ohlcv_rows": 0,
+      "common_date_min": "2015-03-30",
+      "common_date_max": "2017-08-08",
+      "close_ratio_median": 9.99593165174939,
+      "close_ratio_min": 9.342995169082126,
+      "close_ratio_max": 10.55751361743031,
+      "near_constant_close_ratio": false
+    },
+    {
+      "first_code": "EONR",
+      "second_code": "UPRO",
+      "first_rows": 372,
+      "second_rows": 2135,
+      "common_dates": 0,
+      "equal_ohlcv_rows": 0,
+      "common_date_min": null,
+      "common_date_max": null,
+      "close_ratio_median": null,
+      "close_ratio_min": null,
+      "close_ratio_max": null,
+      "near_constant_close_ratio": false
+    },
+    {
+      "first_code": "FIVE",
+      "second_code": "X5",
+      "first_rows": 1540,
+      "second_rows": 0,
+      "common_dates": 0,
+      "equal_ohlcv_rows": 0,
+      "common_date_min": null,
+      "common_date_max": null,
+      "close_ratio_median": null,
+      "close_ratio_min": null,
+      "close_ratio_max": null,
+      "near_constant_close_ratio": false
+    }
+  ],
+  "index_snapshots": {
+    "requested_snapshots": 40,
+    "unique_tickers": 89,
+    "rows": 1803
+  },
+  "benchmark": {
+    "observed_dates": 2508,
+    "date_min": "2015-01-05",
+    "date_max": "2024-12-30"
+  },
+  "targets": [
+    {
+      "count": 165642,
+      "mean": 0.0025049978100663475,
+      "std": 0.05273049448703845,
+      "min": -0.5532490974729242,
+      "p01": -0.13556776556776556,
+      "median": 0.00024989592006663397,
+      "p99": 0.15628505712719631,
+      "max": 1.8193236714975844,
+      "horizon": 5,
+      "grid_rows": 223212,
+      "available_share": 0.7420837589376915,
+      "missing_price_grid_rows": 57372,
+      "calendar_gap_grid_rows": 534,
+      "large_jump_grid_rows": 30,
+      "clean_count": 165620,
+      "clean_values_clipped_for_display": 57
+    },
+    {
+      "count": 162819,
+      "mean": 0.010082165621171237,
+      "std": 0.10508204383339895,
+      "min": -0.5648535564853556,
+      "p01": -0.24831381624623927,
+      "median": 0.0029294274300932788,
+      "p99": 0.32674476185035756,
+      "max": 1.9866939611054248,
+      "horizon": 20,
+      "grid_rows": 223212,
+      "available_share": 0.7294365894306758,
+      "missing_price_grid_rows": 59700,
+      "calendar_gap_grid_rows": 1869,
+      "large_jump_grid_rows": 105,
+      "clean_count": 162754,
+      "clean_values_clipped_for_display": 497
+    }
+  ],
+  "regimes": [
+    {
+      "count": 113953,
+      "mean": 0.0006612837523510636,
+      "std": 0.020069293476960473,
+      "min": -0.36922386720502465,
+      "p01": -0.04968842075232231,
+      "median": 0.0,
+      "p99": 0.057226519022737454,
+      "max": 0.998062015503876,
+      "regime": "2015-2021",
+      "abs_return_gt_50pct": 3,
+      "values_clipped_for_display": 115,
+      "median_20d_volatility": 0.015185836724147061,
+      "median_daily_turnover_rub": 125456467.0
+    },
+    {
+      "count": 52586,
+      "mean": 5.426848000986212e-05,
+      "std": 0.029287939177627634,
+      "min": -0.7698412698412698,
+      "p01": -0.07419128464544815,
+      "median": -0.0006205640504331478,
+      "p99": 0.08231345703476879,
+      "max": 0.4509803921568627,
+      "regime": "2022-2024",
+      "abs_return_gt_50pct": 1,
+      "values_clipped_for_display": 227,
+      "median_20d_volatility": 0.01957022692919034,
+      "median_daily_turnover_rub": 335505462.9
+    }
+  ],
+  "history": {
+    "duplicate_natural_keys": 0,
+    "rows": 1767,
+    "missing_legalcloseprice": 12,
+    "missing_open": 217,
+    "matched_candle_rows": 1550,
+    "comparable_legalclose_candle_rows": 1550,
+    "different_legalclose_candle_rows": 1536
+  },
+  "news": {
+    "rows": 91477,
+    "date_min": "2015-09-01",
+    "date_max": "2024-12-16",
+    "invalid_dates": 0,
+    "missing_or_empty": {
+      "title": 0,
+      "body": 0,
+      "time": 0,
+      "tags": 0,
+      "source": 0
+    },
+    "invalid_or_empty_time": 74040,
+    "placeholder_counts": {
+      "time_not_stated": 74040,
+      "tags_empty_list": 17315
+    },
+    "exact_duplicate_rows": 0,
+    "normalized_text_duplicate_rows": 1711,
+    "cross_split_duplicate_hashes": 266,
+    "cross_split_duplicate_rows": 1534,
+    "sources": {
+      "smart_lab": 34517,
+      "finam": 22433,
+      "bcs": 11946,
+      "bcs_tech": 11560,
+      "rdv": 5721,
+      "t_invest": 4498,
+      "t_analytic": 802
+    },
+    "dataset_splits": {
+      "train": 73164,
+      "test": 18313
+    },
+    "body_length_quantiles": {
+      "0.0": 7.0,
+      "0.25": 70.0,
+      "0.5": 100.0,
+      "0.75": 183.0,
+      "0.99": 4697.0,
+      "1.0": 5849.0
+    },
+    "columns": [
+      "title",
+      "body",
+      "date",
+      "time",
+      "tags",
+      "source",
+      "__index_level_0__",
+      "dataset_split"
+    ],
+    "dtypes": {
+      "title": "object",
+      "body": "object",
+      "date": "object",
+      "time": "object",
+      "tags": "object",
+      "source": "object",
+      "__index_level_0__": "int64",
+      "dataset_split": "object"
+    },
+    "sentiment_label_columns": [],
+    "largest_source_day_groups": [
+      {
+        "parsed_date": "2021-02-19",
+        "source": "bcs_tech",
+        "rows": 4417
+      },
+      {
+        "parsed_date": "2022-06-09",
+        "source": "finam",
+        "rows": 92
+      },
+      {
+        "parsed_date": "2023-09-29",
+        "source": "bcs",
+        "rows": 85
+      },
+      {
+        "parsed_date": "2022-07-09",
+        "source": "finam",
+        "rows": 84
+      },
+      {
+        "parsed_date": "2024-09-25",
+        "source": "bcs",
+        "rows": 84
+      },
+      {
+        "parsed_date": "2024-03-26",
+        "source": "bcs",
+        "rows": 82
+      },
+      {
+        "parsed_date": "2023-06-15",
+        "source": "finam",
+        "rows": 81
+      },
+      {
+        "parsed_date": "2024-06-26",
+        "source": "bcs",
+        "rows": 81
+      },
+      {
+        "parsed_date": "2022-09-28",
+        "source": "finam",
+        "rows": 80
+      },
+      {
+        "parsed_date": "2022-08-09",
+        "source": "finam",
+        "rows": 79
+      }
+    ],
+    "original_corpus": {
+      "news_original_rows": 91955,
+      "news_rows_outside_development": 478,
+      "news_original_date_min": "2009-06-19T00:00:00",
+      "news_original_date_max": "2024-12-16T00:00:00",
+      "original_split_summary": {
+        "train": {
+          "rows": 73564,
+          "date_min": "2011-01-21T00:00:00",
+          "date_max": "2024-12-16T00:00:00",
+          "unparseable_dates": 0
+        },
+        "test": {
+          "rows": 18391,
+          "date_min": "2009-06-19T00:00:00",
+          "date_max": "2024-12-15T00:00:00",
+          "unparseable_dates": 0
+        }
+      }
+    },
+    "dataset_card_claims": {
+      "prose_article_count": 92377,
+      "embedded_split_rows": 91955,
+      "source": "https://huggingface.co/datasets/Kasymkhan/RussianFinancialNews/blob/f83da5c05c82c9086806cf90ded4155052f9605c/README.md"
+    },
+    "calendar_months_in_span": 112,
+    "months_without_articles": 28,
+    "yearly_rows": [
+      {
+        "year": 2015,
+        "rows": 1
+      },
+      {
+        "year": 2016,
+        "rows": 2
+      },
+      {
+        "year": 2017,
+        "rows": 24
+      },
+      {
+        "year": 2018,
+        "rows": 7
+      },
+      {
+        "year": 2019,
+        "rows": 1023
+      },
+      {
+        "year": 2020,
+        "rows": 1015
+      },
+      {
+        "year": 2021,
+        "rows": 7236
+      },
+      {
+        "year": 2022,
+        "rows": 19866
+      },
+      {
+        "year": 2023,
+        "rows": 31758
+      },
+      {
+        "year": 2024,
+        "rows": 30545
+      }
+    ]
+  },
+  "macro": {
+    "fx": {
+      "rows": 2468,
+      "duplicate_dates": 0,
+      "invalid_dates": 0,
+      "missing_values": 0,
+      "nonpositive_values": 0,
+      "date_min": "2015-01-01",
+      "date_max": "2024-12-29",
+      "benchmark_days_before_first_observation": 0
+    },
+    "key_rate": {
+      "rows": 2504,
+      "duplicate_dates": 0,
+      "invalid_dates": 0,
+      "missing_values": 0,
+      "nonpositive_values": 0,
+      "date_min": "2015-01-12",
+      "date_max": "2024-12-30",
+      "benchmark_days_before_first_observation": 4
+    }
+  },
+  "limitations": [
+    "Quarterly snapshots define a diagnostic panel, not a daily point-in-time investable universe.",
+    "Daily candles may cover several sessions; they do not establish the primary-session signal cutoff.",
+    "Security codes are not independent economic instruments; overlapping aliases and retrospectively rescaled candle histories require identity resolution.",
+    "Targets use prices as served retrospectively by ISS; corporate-action adjustments have not been independently verified and total return is not established.",
+    "Observed MCFTR dates are a proxy calendar, not an independently validated exchange calendar.",
+    "Historical available_at and news timezone have not been established by this retrospective download.",
+    "Company regex matches are weak labels; duplicate detection does not measure near-duplicate syndication."
+  ]
+}

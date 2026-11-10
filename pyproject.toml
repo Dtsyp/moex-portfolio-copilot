@@ -1,3 +1,13 @@
+[project]
+name = "moex-portfolio-copilot"
+version = "0.1.0"
+description = "Research pipeline for MOEX portfolio decision support"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
 [tool.ruff]
 line-length = 88
 target-version = "py312"

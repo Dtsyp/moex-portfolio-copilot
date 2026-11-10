@@ -1,0 +1,10 @@
+{
+  "start": "2015-01-01",
+  "end": "2024-12-31",
+  "holdout_start": "2025-01-01",
+  "workers": 4,
+  "history_start": "2024-01-01",
+  "history_tickers": ["SBER", "GAZP", "LKOH", "GMKN", "YNDX", "YDEX", "TCSG", "T", "FIVE"],
+  "news_dataset": "Kasymkhan/RussianFinancialNews",
+  "news_revision": "f83da5c05c82c9086806cf90ded4155052f9605c"
+}
