@@ -1,0 +1,6 @@
+first_code,second_code,first_rows,second_rows,common_dates,equal_ohlcv_rows,common_date_min,common_date_max,close_ratio_median,close_ratio_min,close_ratio_max,near_constant_close_ratio
+TCSG,T,1248,1272,1248,0,2019-10-28,2024-11-27,10,10,10,True
+YNDX,YDEX,2364,115,0,0,,,,,,False
+RUALR,RUAL,652,2448,595,0,2015-03-30,2017-08-08,9.9959317,9.3429952,10.557514,False
+EONR,UPRO,372,2135,0,0,,,,,,False
+FIVE,X5,1540,0,0,0,,,,,,False
